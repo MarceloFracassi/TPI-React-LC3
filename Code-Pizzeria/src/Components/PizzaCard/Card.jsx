@@ -1,19 +1,23 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
+
+import images from "../../constants/images"
 
 function CardPizza() {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+      <Card.Img variant="top" src={images.ahumada} />
       <Card.Body>
-        <Card.Title>Pizza de Muzzarella</Card.Title>
+        <Card.Title>Pizza Ahumada</Card.Title>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item> PIZZA PIZZA</ListGroup.Item>
+        <ListGroup.Item>Pizza casera, fina y crocante, con salsa de tomate y muzzarella ahumada</ListGroup.Item>
+        <ListGroup.Item>$2500</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Button variant="primary">Agregar al carrito</Button>
+        {/*<Button variant='primary' type='number'></Button>*/}
       </Card.Body>
     </Card>
   );
