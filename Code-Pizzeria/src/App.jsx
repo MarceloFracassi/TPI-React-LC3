@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import NavbarPizza from "./Components/Nav/Navbar";
+import CardPizza from './Components/PizzaCard/Card';
 
 function App() {
 
   return (
     <>
-      <div>
-      <h1>Marcello & Santino</h1>
-      </div>
+      <NavbarPizza/>
+      <CardPizza/>
     </>
   )
 }
 
-export default App
+export default App;
