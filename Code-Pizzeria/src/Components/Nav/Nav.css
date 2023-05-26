@@ -1,12 +1,12 @@
 .app__navbar {
     font-family: "Poppins", sans-serif, bold;
     color: #1111;
-    background-color: rgb(227, 178, 64);
+    background-color: rgb(117, 77, 58);
 
 }
 
 .app_navbar_logo {
-    width: 20%;
+    width: 10%;
     padding-left: 10px;
     align-items: center;
 }
