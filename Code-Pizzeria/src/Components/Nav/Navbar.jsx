@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
-
 import images from '../../constants/images'
 import {AiOutlineShoppingCart} from "react-icons/ai"
 
@@ -16,11 +16,11 @@ function NavbarPizza() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="app__navbar-links">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#history">Historia</Nav.Link>
-            <Nav.Link href="#menu">Menu</Nav.Link>
-            <Nav.Link href="#contact">Contacto</Nav.Link>
-            <Nav.Link href="#cart"><AiOutlineShoppingCart/></Nav.Link>            
+          <Nav.Link><Link to="/"><li>Inicio</li></Link></Nav.Link>
+          <Nav.Link><Link to="/history"><li>Historia</li></Link></Nav.Link>
+          <Nav.Link><Link to="/menu"><li>Menu</li></Link></Nav.Link>
+          <Nav.Link><Link to="/contact"><li>Contacto</li></Link></Nav.Link>
+          <Nav.Link><Link to="/cart"><AiOutlineShoppingCart/></Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
