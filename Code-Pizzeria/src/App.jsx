@@ -2,15 +2,15 @@
 import './App.css'
 import { Home } from './Components/Home/Home';
 import NavbarPizza from "./Components/Nav/Navbar";
-import CardPizza from './Components/PizzaCard/Card';
+import { LogicCard } from './Components/PizzaCard/LogicCard';
 
 function App() {
 
   return (
     <>
-      <NavbarPizza/>
-      {/*<CardPizza/>*/}
-      <Home/>
+      {/* <NavbarPizza/> */}
+      <LogicCard/>
+      {/* <Home/> */}
     </>
   )
 }

@@ -2,14 +2,14 @@
     position: relative;
   }
   
-  .app__home-bg-img {
+.app__home-bg-img {
     width: 100%;
     height: 600px;
     display: block;
     filter: brightness(70%);
-  }
+}
   
-  .app__home-text {
+.app__home-text {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -18,12 +18,20 @@
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-  }
+}
 
-  .app__home-text-description{
+.app__home-text-description{
     text-align: center;
     padding: 14px;
-  }
+}
+
+.app__home-container {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
 
 /*.app__home-header{
     text-align: center;
