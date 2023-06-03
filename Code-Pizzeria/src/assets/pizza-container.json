@@ -17,7 +17,7 @@
        "product": "Pizza de Provolone",
        "description": "Pizza de provolone y muzzarella con salsa de tomate",
        "prize": 2800,
-       "image": "/provolone.jpg"
+       "image": "./img/provolone.jpg"
      },
      {
        "id": 4,

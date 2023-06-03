@@ -1,65 +1,21 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
-
-import "./Home.css"
+import './Home.css'
 import images from "../../constants/images"
+import SubHeading from './SubHeading/SubHeading'
 
 export const Home = () => {
   return (
-    <div className='app__home'>
-        <div className='app__home-container'>
-          <Carousel class="col col-sm-9" className='app__home-carousel'>
-            <Carousel.Item interval={5000}>
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-              <img
-                className="d-block w-100"
-                src={images.bgHeader}
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item interval={5000}>
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-              <img
-                className="d-block w-100"
-                src={images.cebolla}
-                alt="Second slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item interval={5000}>
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                </p>
-              </Carousel.Caption>
-              <img
-                className="d-block w-100"
-                src={images.napolitana}
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel>
-            {/* <Figure>
-              <Figure.Caption>
-                <strong>Bienvenidos a Marcello & Santino</strong> El clásico sabor italiano. 
-                </Figure.Caption>
-                <hr />
-                <Figure.Image
-                  lg={10}
-                  width={500}
-                  height={700}
-                  margin={40}
-                  alt="ImageBg"
-                  src={images.bgHeader}
-                /> 
-              </Figure> */}
-        </div>
+    <div className='app__header app__wrapper section__padding' id='home'>
+      <div className='app__wrapper_info'>
+        <SubHeading title="Marcelo & Santino"/>
+        <h1 className='app__header-h1'>The real Italian tradition</h1>
+        <p className='p__opensans' style={{ margin: '2rem 0'}}>Hace más de medio siglo, en el corazón de Nápoles, Italia, una familia apasionada por la cocina decidió compartir su amor por la pizza con el mundo. Con el deseo de llevar la auténtica tradición de la pizza napolitana a nuevas fronteras</p>
+        <button type='button' className='custom__button'>Ver Menú</button>
+      </div>
+
+      <div className='app_wrapper_img'>
+        <img src={images.pizzaHome} alt="header-logo" className='header__logo-img'/>
+      </div>
     </div>
   )
 }

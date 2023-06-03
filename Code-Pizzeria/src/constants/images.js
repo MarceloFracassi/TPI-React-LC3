@@ -11,8 +11,11 @@ import fondoApp from "../assets/img/fondoApp.jpg"
 import logo from "../assets/img/Logo.png"
 import logoLetras from "../assets/img/LogoLetras.png"
 //import bg images
+import pizzaHome from "../assets/img/header1.jpg"
+import pizzaHistory from "../assets/img/pizzaHistory.jpg"
 import bgHeader from "../assets/img/bg-Header.jpg"
 import bgHeader1 from "../assets/img/bg-header-1.jpeg"
+import pizzaCutter from "../assets/img/pizzaCutter.png"
 
 export default {ahumada, cebolla, jamon, mozzarella, napolitana, 
-    provolone, roquefort, fondoApp, logo, logoLetras, bgHeader, bgHeader1}
+    provolone, roquefort, fondoApp, logo, logoLetras, pizzaHome, pizzaCutter, pizzaHistory, bgHeader, bgHeader1}
