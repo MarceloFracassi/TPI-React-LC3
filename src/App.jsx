@@ -1,14 +1,16 @@
 
 import './App.css'
-import NavbarPizza from "./Components/Nav/Navbar";
-import CardPizza from './Components/PizzaCard/Card';
+import { Home } from './Components/Home/Home';
+import { Navbar } from './Components/Navbar/Navbar'
+import {History} from './Components/History/History';
 
 function App() {
 
   return (
     <>
-      <NavbarPizza/>
-      <CardPizza/>
+     <Navbar/>
+     <Home/>
+     <History/>
     </>
   )
 }
