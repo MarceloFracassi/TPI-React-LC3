@@ -1,10 +1,15 @@
 import React from 'react'
 import "./History.css"
 import images from "../../constants/images"
+import { useContext } from 'react';
+import { ThemeContext } from '../Context/ThemeContext';
+
 
 export const History = () => {
+    const { isDarkMode } = useContext(ThemeContext);
   return (
-    <div className="app__aboutus app__bg flex__center section__padding" id="about">
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+    <div className="app__aboutus" id="about">
             
         <div className="app__aboutus-content flex__center">
             <div className="app__aboutus-content_about">
@@ -18,5 +23,7 @@ export const History = () => {
             </div>
         </div>
     </div>
+    </div>
+    
     );
 }

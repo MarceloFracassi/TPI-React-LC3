@@ -1,0 +1,23 @@
+.Footer.light-mode {
+    background-color: var(--color-crimson);
+}
+.Footer.dark-mode {
+    background-color: rgb(168, 161, 161);
+}
+
+.Footer .p {
+    font-family: var(--font-base);
+    color: var(--color-black);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 117px;
+    font-size: 200px;
+}
+
+.info-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1.2em ;
+}
