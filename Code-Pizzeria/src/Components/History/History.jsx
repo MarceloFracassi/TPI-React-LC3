@@ -8,7 +8,7 @@ export const History = () => {
             
         <div className="app__aboutus-content flex__center">
             <div className="app__aboutus-content_about">
-                <img src={images.pizzaHistory} alt="about_pizzaHistory" className="pizzaHistory__img" />
+                <img src={images.historyImg} alt="about_pizzaHistory" className="pizzaHistory__img" />
             </div>
 
             <div className="app__aboutus-content_history">
