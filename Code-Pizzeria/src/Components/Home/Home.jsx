@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import images from "../../constants/images"
 import SubHeading from './SubHeading/SubHeading'
+import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 
 export const Home = () => {
@@ -12,7 +13,10 @@ export const Home = () => {
         <SubHeading title="Marcelo & Santino"/>
         <h1 className='app__header-h1'>The real Italian tradition</h1>
         <p className='p__opensans' style={{ margin: '2rem 0'}}>Hace más de medio siglo, en el corazón de Nápoles, Italia, una familia apasionada por la cocina decidió compartir su amor por la pizza con el mundo. Con el deseo de llevar la auténtica tradición de la pizza napolitana a nuevas fronteras</p>
-        <button type='button' className='custom__button'>Ver Menú</button>
+        <Link to="/menu" className='custom__button'>Ver Menú</Link>
+        
+      </div>
+      <button type='button' className='custom__button'>Ver Menú</button>
       </div> 
       <div>
       <Carousel class="col col-sm-9" className='app__home-carousel'>
@@ -59,7 +63,7 @@ export const Home = () => {
             </Carousel>
             </div>
 
-            
+      
 
     </div>
   )
