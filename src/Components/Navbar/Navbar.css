@@ -1,13 +1,15 @@
-.app_navbar {
+
+.app_navbar.light-mode {
+    background-color: var(--color-crimson);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--color-crimson);
-
     padding: 1rem 2rem;
 }
-
+.app_navbar.dark-mode {
+    background-color: rgb(168, 161, 161);
+}
 .app_navbar-logo {
     display: flex;
     justify-content: flex-start;
@@ -133,3 +135,4 @@
         width: 110px;
     }
 }
+

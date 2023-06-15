@@ -3,14 +3,19 @@ import './Home.css'
 import images from "../../constants/images"
 import SubHeading from './SubHeading/SubHeading'
 import Carousel from 'react-bootstrap/Carousel';
+import { useContext } from 'react';
+import { ThemeContext } from '../Context/ThemeContext';
 
 export const Home = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+
     <div className='app__header app__wrapper section__padding' id='home'>
       <div className='app__wrapper_info'>
         <SubHeading title="Marcelo & Santino"/>
-        <h1 className='app__header-h1'>The real Italian tradition</h1>
+        <h1>The real Italian tradition</h1>
         <p className='p__opensans' style={{ margin: '2rem 0'}}>Hace más de medio siglo, en el corazón de Nápoles, Italia, una familia apasionada por la cocina decidió compartir su amor por la pizza con el mundo. Con el deseo de llevar la auténtica tradición de la pizza napolitana a nuevas fronteras</p>
         <button type='button' className='custom__button'>Ver Menú</button>
       </div> 
@@ -60,7 +65,7 @@ export const Home = () => {
             </div>
 
             
-
+      </div>
     </div>
   )
 }
