@@ -4,9 +4,6 @@
 .app__header.dark-mode {
     background-color: rgb(168, 161, 161);
 }
-.app__header .ButtonPosition{
-    padding-left: 50px;
-    border-radius: 1%;
-    height: 1%;
-    width: 1%;
+.ButtonPosition{
+margin-left: 5%;
 }

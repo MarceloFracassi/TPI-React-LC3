@@ -22,8 +22,10 @@ import headerfamily1 from "../assets/img/headerfamily1.jpg"
 import headerFriends from "../assets/img/headerFriends.jpg"
 import headerPizza from "../assets/img/headerPizza.jpg"
 import historyImg from "../assets/img/historyImg.jpg"
+import WhatsAppLogo from "../assets/img/WhatsAppLogo.jpg"
+import Instagram from "../assets/img/Instagram.jpg"
 
 export default {ahumada, cebolla, jamon, mozzarella, napolitana, 
     provolone, roquefort, fondoApp, logo, logoLetras, pizzaHome,
     pizzaCutter, bgHeader, bgHeader1, header, oven, headerFriends,
-    headerfamily1, headerPizza, historyImg}
+    headerfamily1, headerPizza, WhatsAppLogo, Instagram, historyImg}

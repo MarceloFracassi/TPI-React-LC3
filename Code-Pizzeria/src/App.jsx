@@ -16,7 +16,6 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <ThemeButton />
         <Navbar />
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -26,6 +25,7 @@ function App() {
           <Route path="/about" element={<History />} />
           <Route path="/" element={<Home />} />
         </Routes>
+        <ThemeButton />
         <Footer />
       </BrowserRouter>
     </ThemeProvider>

@@ -23,20 +23,21 @@ export const Navbar = () => {
   };
 
   return (
+    
     <nav className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className='app_navbar-logo'>
-        <img src={images.logoLetras} alt="app logo" />
+        <img src={images.logo} alt="app logo" />
       </div>
       <ul className='app_navbar-links'>
-        <Link to="/" className="links" onClick={() => setShowMenuPage(true)}>Inicio</Link>
-        <Link to="/about" className="links" onClick={() => setShowMenuPage(true)}>Historia</Link>
-        <Link to="/menu" className='links' onClick={() => setShowMenuPage(true)}>Menu</Link>
-        <Link to="/contact" className="links" onClick={() => setShowMenuPage(true)}>Contacto</Link>
+        <Link to="/" className="links" onClick={() => setShowMenuPage(true)}>Inicio     |</Link>
+        <Link to="/about" className="links" onClick={() => setShowMenuPage(true)}>|     Historia     |</Link>
+        <Link to="/menu" className='links' onClick={() => setShowMenuPage(true)}>|     Menu     |</Link>
+        <Link to="/contact" className="links" onClick={() => setShowMenuPage(true)}>|     Contacto</Link>
       </ul>
       <div className='app_navbar-login'>
-        <Link to="/login" className='links'>Iniciar Sesión</Link>
-        <Link to="/signin" className='links'>Regístrate</Link>
-        <Link to="/cart" className='links'><IoCartOutline /></Link>
+        <Link to="/login" className='links'>Iniciar Sesión    |</Link>
+        <Link to="/signin" className='links'>|    Regístrate    |</Link>
+        <Link to="/cart" className='links'>|    <IoCartOutline /></Link>
       </div>
       <div className='app_navbar-smallscreen'>
         <GiHamburgerMenu color="black" fontSize={27} onClick={handleMenuClick} />
