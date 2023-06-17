@@ -11,6 +11,7 @@ import Login from './Components/Log/Login';
 import Signin from './Components/Log/Signin';
 import Cart from './Components/Cart/Cart';
 import Menu from './Components/Menu/Menu';
+import ContactForm from './Components/ContactForm/ContactForm';
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<History />} />
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
+        <Footer/>
         <ThemeButton />
-        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

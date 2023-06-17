@@ -3,7 +3,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 
 import images from "../../constants/images"
-
+//NO HACE NADA ///
 function CardPizza() {
   return (
     <Card style={{ width: '18rem' }}>

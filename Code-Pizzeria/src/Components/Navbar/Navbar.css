@@ -37,7 +37,7 @@
     cursor: pointer;
 }
 
-.app_navbar-links li:hover {
+.links:hover {
     color: var(--color-red);
 }
 

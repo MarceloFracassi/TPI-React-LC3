@@ -1,15 +1,5 @@
 
-.app__aboutus.light-mode {
-    background-color: var(--color-crimson);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
-.app__aboutus.dark-mode {
-    background-color: black;
-}
+
 
 .app__aboutus {
     position: relative;

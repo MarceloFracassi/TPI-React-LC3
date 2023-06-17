@@ -12,6 +12,7 @@ const Footer = () => {
     };
 
     const handleInstagramClick = () => {
+      
       window.location.href = 'https://www.instagram.com/marcelloysantino/';
     };
 
@@ -19,15 +20,16 @@ const Footer = () => {
       <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
         <div className="Footer">
           <p className="line1"></p>
-          <h2 className="info-container">Seguinos en nuestras redes ♥</h2>
+          <h2 className="info-container">Seguinos en nuestras redes ♥</h2>   
           <div className="LogosMedia">
-          <div onClick={handleInstagramClick}>
-            <img src={images.Instagram} alt="Instagram Logo" />
-          </div>
-    
-          <div onClick={handleWhatsAppClick}>
-            <img src={images.WhatsAppLogo} alt="WhatsApp Logo" />
-          </div>
+            <div onClick={handleInstagramClick}>
+              <img src={images.Instagram} alt="Instagram Logo" />
+              <a href="https://www.instagram.com/marcelloysantino/"><p>Instagram!</p></a>
+            </div>
+            <div onClick={handleWhatsAppClick}>
+              <img src={images.WhatsAppLogo} alt="WhatsApp Logo" />
+              <a href="https://wa.me/3416691492"><p>WhatsApp!</p></a>
+            </div>
           </div>
         </div>
       </div>
