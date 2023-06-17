@@ -1,0 +1,44 @@
+const Pizzas_container = [
+  {
+    id: 1,
+    product: "Pizza de Muzzarella",
+    description: "Pizza de muzzarella con salsa de tomate",
+    prize: 2500,
+  },
+  {
+    id: 2,
+    product: "Pizza de Jamon",
+    description: "Pizza de muzzarella y jamon con salsa de tomate",
+    prize: 2600,
+  },
+  {
+    id: 3,
+    product: "Pizza de Provolone",
+    description: "Pizza de provolone y muzzarella con salsa de tomate",
+    prize: 2800,
+  },
+  {
+    id: 4,
+    product: "Pizza de Roquefort",
+    description: "Pizza de roquefort y muzzarella con salsa de tomate",
+    prize: 2900,
+  },
+  {
+    id: 5,
+    product: "Pizza Muzzarella ahumada",
+    description: "Pizza de muzzarella ahumada y salsa de tomate",
+    prize: 2800,
+  },
+  {
+    id: 6,
+    product: "Pizza Napolitana",
+    description: "Pizza de muzzarella con rodajas de tomate y salsa de tomate",
+    prize: 2900,
+  },
+  {
+    id: 7,
+    product: "Pizza Fugazzeta",
+    description: "Pizza de muzzarella con cebolla caramelizada y salsa de tomate",
+    prize: 2900,
+  },
+];

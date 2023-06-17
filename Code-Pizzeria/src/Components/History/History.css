@@ -28,7 +28,9 @@
 }
 
 .app__aboutus-content_about img {
-    width: 140%;
+    width: 120%;
+    margin-right: 50px;
+    opacity: 1;
 }
 
 .app__aboutus-content_history {
