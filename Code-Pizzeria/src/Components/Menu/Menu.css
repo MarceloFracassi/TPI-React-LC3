@@ -1,0 +1,24 @@
+
+.menu-container{
+    padding-top: 40px;
+}
+.menu-container h2{
+    font-family: var(--font-base);
+    color: var(--color-black);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 46px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.line1{
+    border-top: 3px solid rgb(241, 84, 84);
+    width: 50%;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
