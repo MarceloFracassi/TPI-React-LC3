@@ -12,24 +12,27 @@ import Signin from './Components/Log/Signin';
 import Cart from './Components/Cart/Cart';
 import Menu from './Components/Menu/Menu';
 import ContactForm from './Components/ContactForm/ContactForm';
+import { ShoppingCartProvider } from './Components/Context/ShoppingCartContext';
 
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/about" element={<History />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<ContactForm />} />
-        </Routes>
-        <Footer/>
-        <ThemeButton />
-      </BrowserRouter>
+      <ShoppingCartProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/about" element={<History />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<ContactForm />} />
+          </Routes>
+          <Footer/>
+          <ThemeButton />
+        </BrowserRouter>
+      </ShoppingCartProvider>
     </ThemeProvider>
   );
 }

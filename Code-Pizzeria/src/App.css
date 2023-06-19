@@ -11,7 +11,8 @@
 .light-mode .links,
 .light-mode .headtext__cormorant,
 .light-mode .custom-card,
-.light-mode .info-container h2{
+.light-mode .info-container h2,
+.light-mode .custom-card{
   color: black;
 }
 
@@ -23,7 +24,8 @@
 .dark-mode .Footer h2,
 .dark-mode .app__wrapper_info,
 .dark-mode .p__opensans,
-.dark-mode .menu-container h2{
+.dark-mode .menu-container h2,
+.dark-mode .custom-card {
   color: white;
 }
 
