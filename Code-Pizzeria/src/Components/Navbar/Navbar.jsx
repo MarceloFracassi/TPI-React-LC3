@@ -38,6 +38,7 @@ export const Navbar = () => {
         <Link to="/login" className='links'>Iniciar Sesión    |</Link>
         <Link to="/signin" className='links'>|    Regístrate    |</Link>
         <Link to="/cart" className='links'>|    <IoCartOutline /></Link>
+        <span className='item_total'>0</span>
       </div>
       <div className='app_navbar-smallscreen'>
         <GiHamburgerMenu color="black" fontSize={27} onClick={handleMenuClick} />

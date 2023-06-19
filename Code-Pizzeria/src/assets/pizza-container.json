@@ -4,13 +4,15 @@
        "id": 1,
        "product": "Pizza de Muzzarella",
        "description": "Pizza de muzzarella con salsa de tomate",
-       "prize": 2500
+       "prize": 2500,
+       "imgUrl":"./img/mozzarella.jpg"
      },
      {
        "id": 2,
        "product": "Pizza de Jamon",
        "description": "Pizza de muzzarella y jamon con salsa de tomate",
-       "prize": 2600
+       "prize": 2600,
+       "imgUrl":"./img/jamon.jpg"
      },
      {
        "id": 3,
@@ -23,25 +25,30 @@
        "id": 4,
        "product": "Pizza de Roquefort",
        "description": "Pizza de roquefort y muzzarella con salsa de tomate",
-       "prize": 2900
+       "prize": 2900,
+       "imgUrl": "./img/roquefort.jpg"
      },
      {
        "id": 5,
        "product": "Pizza Muzzarella ahumada",
        "description": "Pizza de muzzarella ahumada y salsa de tomate",
-       "prize": 2800
+       "prize": 2800,
+       "imgUrl": "./img/ahumada.jpg"
      },
      {
        "id": 6,
        "product": "Pizza Napolitana",
        "description": "Pizza de muzzarella con rodajas de tomate y salsa de tomate",
-       "prize": 2900
+       "prize": 2900,
+       "imgUrl":"./img/napolitana.jpg"
      },
      {
        "id": 7,
        "product": "Pizza Fugazzeta",
        "description": "Pizza de muzzarella con cebolla caramelizada y salsa de tomate",
-       "prize": 2900
+       "prize": 2900,
+       "imgUrl": "./img/cebolla.jpg"
+
      }
      ]
 }
