@@ -1,0 +1,10 @@
+.app__Contact {
+    background-color: var(--color-crimson);
+
+    
+}
+
+.app__Contact-form {
+    display: flex;
+    margin-left: 50%;
+}
