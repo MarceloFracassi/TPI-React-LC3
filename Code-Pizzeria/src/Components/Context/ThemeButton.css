@@ -1,0 +1,9 @@
+.app__header.light-mode {
+    background-color: var(--color-crimson);
+}
+.app__header.dark-mode {
+    background-color: rgb(168, 161, 161);
+}
+.ButtonPosition{
+margin-left: 5%;
+}
