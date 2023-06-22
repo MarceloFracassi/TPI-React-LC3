@@ -13,7 +13,6 @@ import Cart from './Components/Cart/Cart';
 import Menu from './Components/Menu/Menu';
 import ContactForm from './Components/ContactForm/ContactForm';
 import { ShoppingCartProvider } from './Components/Context/ShoppingCartContext';
-
 function App() {
   return (
     <ThemeProvider>
