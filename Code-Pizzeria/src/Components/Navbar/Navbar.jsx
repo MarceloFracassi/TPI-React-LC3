@@ -6,11 +6,15 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../Context/ThemeContext';
+import { CartContext } from '../Context/ShoppingCartContext';
 
 export const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [showMenuPage, setShowMenuPage] = useState(false);
   const { isDarkMode } = useContext(ThemeContext);
+  const [cart] = useContext(CartContext); // Obtener el estado del carrito desde el contexto
+
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0); // Calcular la cantidad total de pizzas en el carrito
 
   useEffect(() => {
     return () => {
@@ -23,7 +27,6 @@ export const Navbar = () => {
   };
 
   return (
-    
     <nav className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className='app_navbar-logo'>
         <img src={images.logo} alt="app logo" />
@@ -38,7 +41,7 @@ export const Navbar = () => {
         <Link to="/login" className='links'>Iniciar Sesión    |</Link>
         <Link to="/signin" className='links'>|    Regístrate    |</Link>
         <Link to="/cart" className='links'>|    <IoCartOutline /></Link>
-        <span className='item_total'>0</span>
+        <span className='item_total'>{totalQuantity}</span> {/* Mostrar la cantidad de pizzas en el carrito */}
       </div>
       <div className='app_navbar-smallscreen'>
         <GiHamburgerMenu color="black" fontSize={27} onClick={handleMenuClick} />

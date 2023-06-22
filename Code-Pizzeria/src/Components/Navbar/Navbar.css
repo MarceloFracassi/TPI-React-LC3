@@ -96,6 +96,10 @@
     text-align: center;
     font-family: var(--font-base);
 }
+.app_navbar-login span {
+    color: red;
+    
+}
 
 @media screen and (max-width: 2000px) {
     .app_navbar.light-mode .app_navbar-logo img {
@@ -125,4 +129,5 @@
     .app_navbar-logo img {
         width: 110px;
     }
+   
 }
