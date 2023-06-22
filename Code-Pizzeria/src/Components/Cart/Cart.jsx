@@ -24,6 +24,34 @@ const Cart = () => {
     return { quantity, totalPrice };
   }, [cart]);
 
+  const validateCardData = () => {
+    const validationErrors = {};
+
+    if (cardData.cardNumber === '') {
+      validationErrors.cardNumberError = 'Debes ingresar el número de tarjeta.';
+    } else if (!/^\d{16}$/.test(cardData.cardNumber)) {
+      validationErrors.cardNumberError = 'El número de tarjeta debe tener 16 dígitos solo numéricos.';
+    }
+
+    if (cardData.cardHolder === '') {
+      validationErrors.cardHolderError = 'Debes ingresar el titular de la tarjeta.';
+    }
+
+    if (cardData.expirationDate === '') {
+      validationErrors.expirationDateError = 'Debes ingresar la fecha de vencimiento.';
+    } else if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(cardData.expirationDate)) {
+      validationErrors.expirationDateError = 'El formato de fecha de vencimiento debe ser MM/AA.';
+    }
+
+    if (cardData.cvv === '') {
+      validationErrors.cvvError = 'Debes ingresar el CVV.';
+    } else if (!/^\d{3,4}$/.test(cardData.cvv)) {
+      validationErrors.cvvError = 'El CVV debe tener 3 o 4 dígitos solo numéricos.';
+    }
+
+    return validationErrors;
+  };
+
   const handlePurchase = () => {
     const validationErrors = {};
 
@@ -44,18 +72,8 @@ const Cart = () => {
     }
 
     if (paymentMethod === 'tarjeta') {
-      if (cardData.cardNumber === '') {
-        validationErrors.cardNumberError = 'Debes ingresar el número de tarjeta.';
-      }
-      if (cardData.cardHolder === '') {
-        validationErrors.cardHolderError = 'Debes ingresar el titular de la tarjeta.';
-      }
-      if (cardData.expirationDate === '') {
-        validationErrors.expirationDateError = 'Debes ingresar la fecha de vencimiento.';
-      }
-      if (cardData.cvv === '') {
-        validationErrors.cvvError = 'Debes ingresar el CVV.';
-      }
+      const cardValidationErrors = validateCardData();
+      Object.assign(validationErrors, cardValidationErrors);
     }
 
     if (Object.keys(validationErrors).length > 0) {
