@@ -1,8 +1,10 @@
 import React, { useContext, useMemo, useState } from 'react';
 import { CartContext } from '../Context/ShoppingCartContext';
 import './Cart.css';
+import { ThemeContext } from '../Context/ThemeContext';
 
 const Cart = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   const [cart, setCart] = useContext(CartContext);
   const [isPurchased, setIsPurchased] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState('');
@@ -102,7 +104,8 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+    <div className='cart-div'>
       {!isPurchased ? (
         <>
           {quantity > 0 ? (
@@ -193,16 +196,19 @@ const Cart = () => {
             </div>
           ) : (
             <div className="empty-cart">
-              <p>No hay pizzas en el carrito. ¡Agrega algunas deliciosas pizzas para comprar!</p>
+              <p>No hay pizzas en el carrito.</p>
+              <p>¡Agrega algunas deliciosas pizzas para comprar!</p>
             </div>
           )}
         </>
       ) : (
         <div className="purchase-message">
           <h2>¡Gracias por tu compra!</h2>
-          <p>Tu pedido ha sido procesado correctamente.</p>
+          <br></br>
+          <h2>Tu pedido ha sido procesado correctamente.</h2>
         </div>
       )}
+      </div> 
     </div>
   );
 };

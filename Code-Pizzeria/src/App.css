@@ -25,13 +25,9 @@
 .dark-mode .app__wrapper_info,
 .dark-mode .p__opensans,
 .dark-mode .menu-container h2,
-.dark-mode .custom-card {
+.dark-mode .empty-cart{
   color: white;
 }
-
-
-
-
 
 .section__padding {
     padding: 4rem 6rem;

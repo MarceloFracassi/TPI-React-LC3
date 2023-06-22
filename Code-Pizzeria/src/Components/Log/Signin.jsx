@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import './Signin.css';
+import { ThemeContext } from '../Context/ThemeContext';
+
+
 
 function Signin() {
   const [validated, setValidated] = useState(false);
@@ -19,7 +22,9 @@ function Signin() {
     setValidated(true);
   };
 
+  const { isDarkMode } = useContext(ThemeContext);
   return (
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
     <div className="custom-form-container">
       <Form noValidate validated={validated} onSubmit={handleSubmit} className="custom-form">
         <Row className="mb-3">
@@ -96,6 +101,8 @@ function Signin() {
         </Row>
         <Button type="submit" className="custom-button">Registrarse</Button>
       </Form>
+      <br></br>
+    </div>
     </div>
   );
 }
