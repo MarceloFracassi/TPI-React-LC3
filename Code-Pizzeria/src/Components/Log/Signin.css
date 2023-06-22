@@ -1,0 +1,58 @@
+/* Estilos personalizados para el formulario de registro */
+.custom-form-container {
+    max-width: 500px; /* Ancho máximo del contenedor del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+  }
+  
+  .custom-form {
+    padding: 20px;
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 5px;
+    background-color: #eae6e3; /* Color tierra */
+  }
+  
+  .custom-label {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .custom-input {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 3px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Organizar los campos en grupos de dos */
+  .row .col-md-4 {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el grupo "Nombre" y "Dirección" */
+  .row .col-md-4:nth-child(1),
+  .row .col-md-4:nth-child(2) {
+    flex-basis: calc(50% - 5px);
+    margin-right: 10px;
+  }
+  
+  .row .col-md-4:nth-child(2) {
+    margin-right: 0;
+  }
+  
+  /* Otros estilos personalizados según sea necesario */
+  
