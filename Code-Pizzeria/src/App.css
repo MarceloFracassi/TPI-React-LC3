@@ -25,7 +25,12 @@
 .dark-mode .app__wrapper_info,
 .dark-mode .p__opensans,
 .dark-mode .menu-container h2,
-.dark-mode .empty-cart{
+.dark-mode .empty-cart,
+.dark-mode .message,
+.dark-mode .signin,
+.dark-mode .title,
+.dark-mode .LogosMedia,
+.dark-mode .cart-form{
   color: white;
 }
 

@@ -12,6 +12,10 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-base);
+    color: var(--color-black);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
   
   .cart-form label {
@@ -65,10 +69,16 @@
   .purchase-message h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: var(--font-base);
+    color: var(--color-black);
+    font-weight: bold;
   }
   
   .purchase-message p {
     font-size: 18px;
+    font-family: var(--font-base);
+    color: var(--color-black);
+    font-weight: bold;
   }
   
   .error-message {
@@ -83,4 +93,10 @@
     align-items: center;
     flex-direction: column;
     font-weight: bold;
+    font-family: var(--font-base);
+    color: var(--color-black);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 80px;
+    font-size: 30px;
   }

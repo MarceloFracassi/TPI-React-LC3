@@ -2,6 +2,7 @@ import React, { useContext, useMemo, useState } from 'react';
 import { CartContext } from '../Context/ShoppingCartContext';
 import './Cart.css';
 import { ThemeContext } from '../Context/ThemeContext';
+import Order from './Order'
 
 const Cart = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -19,13 +20,20 @@ const Cart = () => {
   const [errors, setErrors] = useState({});
   const [showCardForm, setShowCardForm] = useState(false);
 
+    //state que envia el monto al componente Order
+  const [purchaseTotalPrice, setPurchaseTotalPrice] = useState(0);
+  const [QuantityOrder, setQuantityOrder] = useState(0)
+  const [deliveryO, setDeliverO] = useState('');
+  const [deliveryA, setDeliveryA] = useState('')
+  const [methodPay, setMethodPay] = useState('');
+   
   const { quantity, totalPrice } = useMemo(() => {
     const quantity = cart.reduce((acc, curr) => acc + curr.quantity, 0);
     const totalPrice = cart.reduce((acc, curr) => acc + curr.quantity * curr.prize, 0);
-
+  
     return { quantity, totalPrice };
   }, [cart]);
-
+  
   const validateCardData = () => {
     const validationErrors = {};
 
@@ -64,7 +72,7 @@ const Cart = () => {
     if (paymentMethod === '') {
       validationErrors.paymentMethodError = 'Debes seleccionar el método de pago.';
     }
-
+    
     if (deliveryOption === '') {
       validationErrors.deliveryOptionError = 'Debes seleccionar la opción de entrega.';
     }
@@ -84,6 +92,12 @@ const Cart = () => {
     }
 
     setIsPurchased(true);
+    //se setea el estado para enviar al componente order
+    setPurchaseTotalPrice(totalPrice);
+    setQuantityOrder(quantity);
+    setDeliverO(deliveryOption);
+    setDeliveryA(deliveryAddress);
+    setMethodPay(paymentMethod);
     setCart([]);
     setPaymentMethod('');
     setDeliveryOption('');
@@ -196,6 +210,7 @@ const Cart = () => {
             </div>
           ) : (
             <div className="empty-cart">
+              <br></br>
               <p>No hay pizzas en el carrito.</p>
               <p>¡Agrega algunas deliciosas pizzas para comprar!</p>
             </div>
@@ -206,6 +221,12 @@ const Cart = () => {
           <h2>¡Gracias por tu compra!</h2>
           <br></br>
           <h2>Tu pedido ha sido procesado correctamente.</h2>
+          <Order 
+          totalPrice={purchaseTotalPrice}
+          quantityOrder={QuantityOrder}
+          deliveryOption={deliveryO}
+          deliveryAddress={deliveryA}
+          paymentMethod={methodPay}/>
         </div>
       )}
       </div> 

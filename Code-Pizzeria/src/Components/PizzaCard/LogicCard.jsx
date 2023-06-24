@@ -21,6 +21,7 @@ export const LogicCard = () => {
             key={product.id}
                 {...product}            
         />))}
+        
         </div>
     </div>
   )
