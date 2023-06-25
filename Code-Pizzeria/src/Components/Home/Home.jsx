@@ -1,19 +1,17 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import './Home.css'
 import images from "../../constants/images"
 import Carousel from 'react-bootstrap/Carousel';
 import { useContext } from 'react';
 import { ThemeContext } from '../Context/ThemeContext';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
   const { isDarkMode } = useContext(ThemeContext);
-  const navigation = useNavigate();
-
-  const handleVerMenuClick = () => {
-    navigation('/menu');
-  };
-
+  const navigate = useNavigate();
+  const HandlerMenu = () => {
+    navigate('/Menu')
+  }
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
 
@@ -22,9 +20,7 @@ export const Home = () => {
         <h1>The real Italian tradition</h1>
         <p className='line'></p>
         <p className='p__opensans'>Hace más de medio siglo, en el corazón de Nápoles, Italia, una familia apasionada por la cocina decidió compartir su amor por la pizza con el mundo. Con el deseo de llevar la auténtica tradición de la pizza napolitana a nuevas fronteras</p>
-        <button type='button' className='custom__button' onClick={handleVerMenuClick}>
-          Ver Menú
-        </button>
+        <button type='button' className='custom__button' onClick={HandlerMenu}>Ver Menú</button>
       </div> 
       <div>
       <Carousel class="col col-sm-9" className='app__home-carousel'>
