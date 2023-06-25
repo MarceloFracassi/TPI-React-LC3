@@ -29,7 +29,7 @@ const Cart = () => {
    
   const { quantity, totalPrice } = useMemo(() => {
     const quantity = cart.reduce((acc, curr) => acc + curr.quantity, 0);
-    const totalPrice = cart.reduce((acc, curr) => acc + curr.quantity * curr.prize, 0);
+    const totalPrice = cart.reduce((acc, curr) => acc + curr.quantity * curr.price, 0);
   
     return { quantity, totalPrice };
   }, [cart]);
