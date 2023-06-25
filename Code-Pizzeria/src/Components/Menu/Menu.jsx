@@ -1,8 +1,8 @@
 import React from "react";
 import "./Menu.css";
-import { LogicCard } from "../PizzaCard/LogicCard";
 import { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
+import CardPizza from "../PizzaCard/CardPizza";
 
 const Menu = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -14,7 +14,7 @@ const Menu = () => {
           <p className="line1"></p>
           <br></br>
         </div>
-        <LogicCard />
+        <CardPizza />
       </div>
       <br></br>
     </div>
