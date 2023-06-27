@@ -49,6 +49,7 @@ export const Navbar = () => {
         </li>
       </ul>
       <div className='app_navbar-login'>
+
         <Link to="/login" className='links'>Iniciar Sesión</Link>
         <span className="link-separator">|</span> {/* Separador */}
         <Link to="/signin" className='links'>Regístrate</Link>
