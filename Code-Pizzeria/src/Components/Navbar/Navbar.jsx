@@ -38,7 +38,8 @@ export const Navbar = () => {
         <Link to="/contact" className="links" onClick={() => setShowMenuPage(true)}>|     Contacto</Link>
       </ul>
       <div className='app_navbar-login'>
-        <Link to="/login" className='links'>Iniciar Sesión    |</Link>
+        
+        <Link to="/login" className='links'> Iniciar Sesión    |</Link>
         <Link to="/signin" className='links'>|    Regístrate    |</Link>
         <Link to="/cart" className='links'>|    <IoCartOutline /></Link>
         <span className='item_total'>{totalQuantity}</span> {/* Mostrar la cantidad de pizzas en el carrito */}
