@@ -15,7 +15,6 @@ const SignIn = () => {
   const { isDarkMode } = useContext(ThemeContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [rol, setRol] = useState("user");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
@@ -26,7 +25,6 @@ const SignIn = () => {
       auth,
       email,
       password,
-      rol,
       firstName,
       lastName,
       address
@@ -35,12 +33,13 @@ const SignIn = () => {
     const docRef = doc(firestore, `Users/${infoUser.user.uid}`);
     setDoc(docRef, {
       correo: email,
-      rol: rol,
+      rol: "cliente", // Establece el rol como "cliente"
       firstName: firstName,
       lastName: lastName,
       address: address,
     });
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -73,11 +72,11 @@ const SignIn = () => {
     return password.length >= 6;
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (email === "fracassimarcelo@gmail.com") {
       setRol("admin");
     }
-  }, [email]);
+  }, [email]);*/
 
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
