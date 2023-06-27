@@ -12,7 +12,8 @@
 .light-mode .headtext__cormorant,
 .light-mode .custom-card,
 .light-mode .info-container h2,
-.light-mode .custom-card{
+.light-mode .custom-card,
+.light-mode .login-container{
   color: black;
 }
 
@@ -30,7 +31,9 @@
 .dark-mode .signin,
 .dark-mode .title,
 .dark-mode .LogosMedia,
-.dark-mode .cart-form{
+.dark-mode .cart-form,
+.dark-mode .login-container,
+.dark-mode .register{
   color: white;
 }
 

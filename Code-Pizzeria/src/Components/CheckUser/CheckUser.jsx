@@ -4,7 +4,7 @@ import firebasAapp from '../../firebase';
 import {getAuth, onAuthStateChanged} from "firebase.auth"
 
 const auth = getAuth(firebasAapp);
-
+//POR AHORA NO HACE NADA
 const CheckUser = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
