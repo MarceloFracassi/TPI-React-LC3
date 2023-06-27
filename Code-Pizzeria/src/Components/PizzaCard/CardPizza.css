@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding-left: 100px;
 }
 
 .custom-card {
@@ -72,13 +74,13 @@
 }
 
 .custom-card .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #e2bfbc;
+  border-color: #e2bfbc;
 }
 
 .custom-card .btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #e2bfbc;
+  border-color: #e2bfbc;
 }
 
 .custom-card .button-group {

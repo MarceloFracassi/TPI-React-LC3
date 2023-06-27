@@ -1,6 +1,6 @@
 import firebasAapp from "../../fireBase/firebase";
 import { useState } from "react";
-import './Login.css'
+import './Login.css';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +16,7 @@ const Login = () => {
   const firestore = getFirestore(firebasAapp);
   const navigate = useNavigate();
 
-  const registerUser = async (email, password ) => {
+  const registerUser = async (email, password) => {
     const infoUser = await createUserWithEmailAndPassword(auth, email, password);
     console.log(infoUser.user.uid);
     const docRef = doc(firestore, `Users/${infoUser.user.uid}`);
@@ -64,7 +64,7 @@ const Login = () => {
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className="All">
         <div className="login-container">
-          <h1>{registered ? "" : "Ingreso a Sesion"}</h1>
+          <h1>{registered ? "" : "Iniciá sesión"}</h1>
           <form className="login-form" onSubmit={handleSubmit}>
             <label className='form_inputs'>
               <input
@@ -87,7 +87,9 @@ const Login = () => {
               Iniciar Sesión
             </button>
           </form>
-          <button className="toggle-registration" onClick={handleToggleRegistration}>NO TENGO CUENTA</button>
+          <button className="toggle-registration" onClick={handleToggleRegistration}>
+            NO TENGO CUENTA
+          </button>
         </div>
       </div>
     </div>

@@ -7,14 +7,6 @@ import { ThemeContext } from '../Context/ThemeContext';
 import { CartContext } from '../Context/ShoppingCartContext';
 import { getFirestore, getDocs, collection } from 'firebase/firestore';
 
-import ahumada from "../../assets/img/ahumada.jpg";
-import cebolla from "../../assets/img/cebolla.jpg";
-import jamon from "../../assets/img/jamon.jpg";
-import mozzarella from "../../assets/img/mozzarella.jpg";
-import napolitana from "../../assets/img/napolitana.jpg";
-import provolone from "../../assets/img/provolone.jpg";
-import roquefort from "../../assets/img/roquefort.jpg";
-
 function CardPizza() {
   const [data, setData] = useState([]);
   const { isDarkMode } = useContext(ThemeContext);
@@ -81,32 +73,11 @@ function CardPizza() {
     return cart.find((item) => item.id === id)?.quantity || 0;
   };
 
-  const getPizzaImage = (imgUrl) => {
-    switch (imgUrl) {
-      case 'ahumada.jpg':
-        return ahumada;
-      case 'cebolla.jpg':
-        return cebolla;
-      case 'jamon.jpg':
-        return jamon;
-      case 'mozzarella.jpg':
-        return mozzarella;
-      case 'napolitana.jpg':
-        return napolitana;
-      case 'provolone.jpg':
-        return provolone;
-      case 'roquefort.jpg':
-        return roquefort;
-      default:
-        return "";
-    }
-  };
-
   return (
-    <div className="custom-card-container">
+    <div className="custom-card-container nude-background">
       {data.map((pizza) => (
         <Card className={`custom-card ${isDarkMode ? 'dark-mode' : 'light-mode'}`} key={pizza.id}>
-          <Card.Img variant="top" src={getPizzaImage(pizza.imgUrl)} />
+          <Card.Img variant="top" src={pizza.imagen} />
           <Card.Body className="card-body">
             <Card.Title>{pizza.product}</Card.Title>
           </Card.Body>
@@ -117,15 +88,15 @@ function CardPizza() {
           <Card.Body className="card-footer">
             {getQuantityById(pizza.id) > 0 && <div className="quantity">{getQuantityById(pizza.id)}</div>}
             {getQuantityById(pizza.id) === 0 ? (
-              <Button variant="primary" onClick={() => addToCart(pizza.id)}>
+              <Button variant="primary" className="custom-button" onClick={() => addToCart(pizza.id)}>
                 Agregar al carrito
               </Button>
             ) : (
               <>
-                <Button variant="primary" onClick={() => addToCart(pizza.id)}>
+                <Button variant="primary" className="custom-button" onClick={() => addToCart(pizza.id)}>
                   +
                 </Button>
-                <Button variant="primary" onClick={() => removeItem(pizza.id)}>
+                <Button variant="primary" className="custom-button" onClick={() => removeItem(pizza.id)}>
                   -
                 </Button>
               </>
