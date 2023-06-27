@@ -13,7 +13,8 @@
 .light-mode .custom-card,
 .light-mode .info-container h2,
 .light-mode .custom-card,
-.light-mode .login-container{
+.light-mode .login-container,
+.light-mode .button{
   color: black;
 }
 
@@ -33,7 +34,8 @@
 .dark-mode .LogosMedia,
 .dark-mode .cart-form,
 .dark-mode .login-container,
-.dark-mode .register{
+.dark-mode .register,
+.dark-mode .button {
   color: white;
 }
 
