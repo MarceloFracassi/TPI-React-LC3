@@ -22,7 +22,6 @@
     line-height: 30px;
     font-size: 25px;
     margin-bottom: 20px;
-
 }
 .header__logo-img {
     width: 120%;
@@ -48,17 +47,20 @@
   display: block;
 }
 .app__home-carousel{
-    margin-left: 130px;
+    height: auto;
+    margin: 0 auto;
+    max-height: 500px;
+    position: fixed; 
 }
+
 .app__home-carousel img{
-    width: 100px;
+    width: 500px;
     height: 500px;
     display: flex;
     filter: brightness(70%);
     margin: 0 auto;
+    object-fit: contain;
 }
-
-
 
 .Letter {
     text-shadow: 15px 4px 15px black;

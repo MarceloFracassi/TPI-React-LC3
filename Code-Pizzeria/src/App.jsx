@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './Components/Home/Home';
@@ -15,6 +14,7 @@ import ContactForm from './Components/ContactForm/ContactForm';
 import { ShoppingCartProvider } from './Components/Context/ShoppingCartContext';
 
 function App() {
+
   return (
     <ThemeProvider>
       <ShoppingCartProvider>

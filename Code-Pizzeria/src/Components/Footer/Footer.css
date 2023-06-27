@@ -43,8 +43,13 @@
 
 .LogosMedia p{
     font-size: 20px;
+    font-family: var(--font-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
 }
-
 .LogosMedia a:hover{
  text-decoration: underline red;  
 }

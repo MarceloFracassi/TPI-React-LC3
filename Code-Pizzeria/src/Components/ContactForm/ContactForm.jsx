@@ -2,6 +2,7 @@ import './ContactForm.css'
 import { useContext } from 'react';
 import { ThemeContext } from '../Context/ThemeContext';
 
+
 const ContactForm = () => {
     const { isDarkMode } = useContext(ThemeContext);
 
@@ -44,7 +45,7 @@ const ContactForm = () => {
                     <span>Mensaje</span>
                 </label>
                 <button className="submit">Enviar</button>
-                <p className="signin">Ya estás registrado? <a href="#">Registrate aquí!</a> </p>
+                <p className="signin">Ya estás registrado? <a href="signin">Registrate aquí!</a> </p>
             </form>
         </div>
     );

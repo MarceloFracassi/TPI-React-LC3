@@ -12,7 +12,8 @@
 .light-mode .headtext__cormorant,
 .light-mode .custom-card,
 .light-mode .info-container h2,
-.light-mode .custom-card{
+.light-mode .custom-card,
+.light-mode .login-container{
   color: black;
 }
 
@@ -25,13 +26,16 @@
 .dark-mode .app__wrapper_info,
 .dark-mode .p__opensans,
 .dark-mode .menu-container h2,
-.dark-mode .custom-card {
+.dark-mode .empty-cart,
+.dark-mode .message,
+.dark-mode .signin,
+.dark-mode .title,
+.dark-mode .LogosMedia,
+.dark-mode .cart-form,
+.dark-mode .login-container,
+.dark-mode .register{
   color: white;
 }
-
-
-
-
 
 .section__padding {
     padding: 4rem 6rem;
