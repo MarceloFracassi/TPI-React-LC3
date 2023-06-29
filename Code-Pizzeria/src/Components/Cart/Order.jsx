@@ -1,7 +1,6 @@
 import React from 'react';
 import './Order.css'
 
-//Faltan agregar los items y datos del pedido
 const Order = ({ totalPrice, quantityOrder, deliveryOption, deliveryAddress, paymentMethod }) => {
   return (
     <div className="order">

@@ -37,6 +37,7 @@ const SignIn = () => {
       firstName: firstName,
       lastName: lastName,
       address: address,
+      password: password
     });
   };
   
@@ -72,11 +73,6 @@ const SignIn = () => {
     return password.length >= 6;
   };
 
-  /*useEffect(() => {
-    if (email === "fracassimarcelo@gmail.com") {
-      setRol("admin");
-    }
-  }, [email]);*/
 
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
