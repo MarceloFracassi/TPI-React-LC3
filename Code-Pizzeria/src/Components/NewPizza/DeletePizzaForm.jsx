@@ -26,6 +26,8 @@ const DeletePizzaForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <br />
+      <p>PIZZA A ELIMINAR</p>
       <div className="input-field">
         <input
           type="text"
