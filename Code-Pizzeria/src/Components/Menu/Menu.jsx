@@ -3,11 +3,11 @@ import "./Menu.css";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
 import CardPizza from "../PizzaCard/CardPizza";
-import { CardPizzaAdmin } from "../PizzaCard/CardPizzaAdmin";
 //Import Firebase
 import firebaseApp from "../../fireBase/firebase";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { NewPizza } from "../NewPizza/NewPizza";
 const auth = getAuth(firebaseApp);
 const firestore = getFirestore(firebaseApp);
 
@@ -52,7 +52,7 @@ const Menu = () => {
           <p className="line1"></p>
           <br></br>
         </div>
-        {user?.rol === "admin" ? <CardPizzaAdmin/> : <CardPizza/>}
+        {user?.rol === "admin" ? <NewPizza/> : <CardPizza/>}
       </div>
       <br></br>
     </div>

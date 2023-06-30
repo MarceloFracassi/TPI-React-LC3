@@ -184,7 +184,7 @@ const Cart = () => {
                     {errors.cardHolderError && <span className="error-message">{errors.cardHolderError}</span>}
                   </div>
                   <div className="form-row">
-                    <label htmlFor="expirationDate">Fecha de vencimiento:</label>
+                    <label htmlFor="expirationDate">Fecha de vencimiento (MM/AA):</label>
                     <input
                       type="text"
                       id="expirationDate"
