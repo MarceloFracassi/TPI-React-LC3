@@ -45,6 +45,9 @@ const AddPizzaForm = () => {
   return (
     <>
     <form onSubmit={handleSubmit}>
+      <p>
+        AGREGUE NUEVA PIZZA
+      </p>
       <div className="input-field">
         <input
           type="text"
