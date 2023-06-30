@@ -13,7 +13,7 @@ const ThemeButton = () => {
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <Button variant="outline-dark" className="ButtonPosition" onClick={handleThemeToggle}>
-      {isDarkMode ? '🌞' : '🌚'}
+      {isDarkMode ? 'modo claro ◒' : 'modo oscuro ◓'}
       </Button>
     </div>
   );

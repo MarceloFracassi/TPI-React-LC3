@@ -1,0 +1,12 @@
+.UserName {
+    font-family: var(--font-base);
+    font-weight: bold;
+}
+
+.UserName.light-mode {
+    background-color: var(--color-crimson);
+}
+.UserName.dark-mode {
+    background-color: rgb(168, 161, 161);
+}
+

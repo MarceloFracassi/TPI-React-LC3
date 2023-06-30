@@ -10,8 +10,8 @@ import Login from './Components/Log/Login';
 import Signin from './Components/Log/Signin';
 import Cart from './Components/Cart/Cart';
 import Menu from './Components/Menu/Menu';
-import ContactForm from './Components/ContactForm/ContactForm';
 import { ShoppingCartProvider } from './Components/Context/ShoppingCartContext';
+import HelloUser from './Components/HelloUser/HelloUser';
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
       <ShoppingCartProvider>
         <BrowserRouter>
           <Navbar />
+          <HelloUser/>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<Signin />} />
@@ -27,7 +28,6 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<History />} />
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<ContactForm />} />
           </Routes>
           <Footer/>
           <ThemeButton />

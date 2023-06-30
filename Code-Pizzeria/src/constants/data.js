@@ -1,6 +1,0 @@
-const pizzas = [
-    {
-        nombre: ahumada,
-
-    },
-]

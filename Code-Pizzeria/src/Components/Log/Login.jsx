@@ -1,8 +1,8 @@
 import firebasAapp from "../../fireBase/firebase";
 import { useState } from "react";
-import './Login.css'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import './Login.css';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { ThemeContext } from '../Context/ThemeContext';
@@ -14,37 +14,40 @@ const Login = () => {
   const { isDarkMode } = useContext(ThemeContext);
   const [registered, setRegistered] = useState(false);
   const firestore = getFirestore(firebasAapp);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
-  const registerUser = async (email, password ) => {
-    const infoUser = await createUserWithEmailAndPassword(auth, email, password);
-    console.log(infoUser.user.uid);
-    const docRef = doc(firestore, `Users/${infoUser.user.uid}`);
-    setDoc(docRef, { correo: email });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.elements.email.value;
     const password = e.target.elements.password.value;
-
+  
     if (!validateEmail(email)) {
       setError('Ingresa un email válido');
       return;
     }
-
+  
     if (!validatePassword(password)) {
       setError('La contraseña debe tener al menos 6 caracteres');
       return;
     }
-
-    if (registered) {
-      registerUser(email, password);
-    } else {
-      signInWithEmailAndPassword(auth, email, password);
+  
+    try {
+      // Intenta iniciar sesión con el email y contraseña proporcionados
+      await signInWithEmailAndPassword(auth, email, password);
+      // Si el inicio de sesión es exitoso, redirige al usuario a la página principal
+      navigate('/');
+    } catch (error) {
+      // Si ocurre un error durante el inicio de sesión, puedes mostrar un mensaje de error específico
+      // Por ejemplo, si el código de error es 'auth/user-not-found', puedes indicar que el usuario no está registrado
+      if (error.code === 'auth/user-not-found') {
+        setError('Usuario no registrado. Regístrese a continuación.');
+      } else {
+        // Si ocurre otro tipo de error, puedes mostrar un mensaje genérico
+        setError('Error al iniciar sesión. Inténtelo de nuevo más tarde.');
+      }
     }
-    navigate('/');
   };
+  
 
   const handleToggleRegistration = () => {
     setRegistered(!registered);
@@ -64,7 +67,7 @@ const Login = () => {
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className="All">
         <div className="login-container">
-          <h1>{registered ? "" : "Ingreso a Sesion"}</h1>
+          <h1>{registered ? "" : "Iniciá sesión"}</h1>
           <form className="login-form" onSubmit={handleSubmit}>
             <label className='form_inputs'>
               <input
@@ -87,7 +90,9 @@ const Login = () => {
               Iniciar Sesión
             </button>
           </form>
-          <button className="toggle-registration" onClick={handleToggleRegistration}>NO TENGO CUENTA</button>
+          <button className="toggle-registration" onClick={handleToggleRegistration}>
+            NO TENGO CUENTA
+          </button>
         </div>
       </div>
     </div>
@@ -95,16 +100,3 @@ const Login = () => {
 };
 
 export default Login;
-
-    /*
-  cierre de sesión:
-  importar 
-  import firebasAapp from "../../firebase";
-  import {getAuth} from "firebase/auth";
-  const auth = getAuth(firebaseApp);
-        <button onClick={()=> singOut(auth)}>cerrar sesión</button> 
-  */
-
-
-
-

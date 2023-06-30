@@ -32,16 +32,25 @@ export const Navbar = () => {
         <img src={images.logo} alt="app logo" />
       </div>
       <ul className='app_navbar-links'>
-        <Link to="/" className="links" onClick={() => setShowMenuPage(true)}>Inicio     |</Link>
-        <Link to="/about" className="links" onClick={() => setShowMenuPage(true)}>|     Historia     |</Link>
-        <Link to="/menu" className='links' onClick={() => setShowMenuPage(true)}>|     Menu     |</Link>
-        <Link to="/contact" className="links" onClick={() => setShowMenuPage(true)}>|     Contacto</Link>
+        <li>
+          <Link to="/" className="links" onClick={() => setShowMenuPage(true)}>Inicio</Link>
+        </li>
+        <li className="link-separator">|</li> {/* Separador */}
+        <li>
+          <Link to="/about" className="links" onClick={() => setShowMenuPage(true)}>Historia</Link>
+        </li>
+        <li className="link-separator">|</li> {/* Separador */}
+        <li>
+          <Link to="/menu" className='links' onClick={() => setShowMenuPage(true)}>Menu</Link>
+        </li>
       </ul>
       <div className='app_navbar-login'>
-        
-        <Link to="/login" className='links'> Iniciar Sesión    |</Link>
-        <Link to="/signin" className='links'>|    Regístrate    |</Link>
-        <Link to="/cart" className='links'>|    <IoCartOutline /></Link>
+
+        <Link to="/login" className='links'>Iniciar Sesión</Link>
+        <span className="link-separator">|</span> {/* Separador */}
+        <Link to="/signin" className='links'>Regístrate</Link>
+        <span className="link-separator">|</span> {/* Separador */}
+        <Link to="/cart" className='links'><IoCartOutline /></Link>
         <span className='item_total'>{totalQuantity}</span> {/* Mostrar la cantidad de pizzas en el carrito */}
       </div>
       <div className='app_navbar-smallscreen'>
@@ -54,7 +63,6 @@ export const Navbar = () => {
               <li className='links'><Link to="/">Inicio</Link></li>
               <li className='links'><Link to="/about">Historia</Link></li>
               <li className='links'><Link to="/menu">Menu</Link></li>
-              <li className='links'><Link to="/contact">Contacto</Link></li>
             </ul>
           </div>
         )}

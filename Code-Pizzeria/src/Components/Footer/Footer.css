@@ -1,55 +1,77 @@
-
-.Footer{
+.Footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-}
-
-.Footer .line1 {
-    border-top: 3px solid rgb(241, 84, 84);
+    font-family: inherit; /* Agregado para heredar la fuente del elemento padre */
+  }
+  
+  .Footer .line1 {
+    border-top: 3px solid rgb(179, 121, 121);
     width: 50%;
     height: 0;
     margin-left: auto;
     margin-right: auto;
-}
-
-.Footer .info-container {
+  }
+  
+  .Footer .info-container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: bold;
-
-}
-
-.Footer h2 {
+  }
+  
+  .LogosMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 300; /* Ajustado a un valor más bajo para hacer las letras más finas */
+  }
+  
+  .LogosMedia div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-right: 20px;
+    text-align: center; /* Agregado para centrar el texto */
+  }
+  
+  .Footer h2 {
     font-family: var(--font-base);
+    font-weight: 300;
     color: var(--color-black);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     font-size: 24px;
-}
-
-.LogosMedia img{
+  }
+  
+  .LogosMedia img {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin-top: 20px;
     width: 40px;
-}
-
-.LogosMedia p{
+  }
+  
+  .LogosMedia p {
     font-size: 20px;
     font-family: var(--font-base);
+    font-weight: 300;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-weight: bold;
-}
-.LogosMedia a:hover{
- text-decoration: underline red;  
-}
+    margin: 0;
+  }
+  
+  .LogosMedia a:hover {
+    text-decoration: underline;
+    color: rgb(179, 143, 143);
+  }
+  
