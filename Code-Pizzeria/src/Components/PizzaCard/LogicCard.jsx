@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useContext } from 'react';
 import { getFirestore, getDocs, collection } from 'firebase/firestore';
 import CardPizza from './CardPizza';

@@ -43,10 +43,6 @@ export const Navbar = () => {
         <li>
           <Link to="/menu" className='links' onClick={() => setShowMenuPage(true)}>Menu</Link>
         </li>
-        <li className="link-separator">|</li> {/* Separador */}
-        <li>
-          <Link to="/contact" className="links" onClick={() => setShowMenuPage(true)}>Contacto</Link>
-        </li>
       </ul>
       <div className='app_navbar-login'>
 
@@ -67,7 +63,6 @@ export const Navbar = () => {
               <li className='links'><Link to="/">Inicio</Link></li>
               <li className='links'><Link to="/about">Historia</Link></li>
               <li className='links'><Link to="/menu">Menu</Link></li>
-              <li className='links'><Link to="/contact">Contacto</Link></li>
             </ul>
           </div>
         )}

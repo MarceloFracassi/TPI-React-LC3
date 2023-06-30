@@ -1,8 +1,8 @@
 import firebasAapp from "../../fireBase/firebase";
 import { useState } from "react";
 import './Login.css';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { ThemeContext } from '../Context/ThemeContext';
@@ -14,20 +14,7 @@ const Login = () => {
   const { isDarkMode } = useContext(ThemeContext);
   const [registered, setRegistered] = useState(false);
   const firestore = getFirestore(firebasAapp);
-  const navigate = useNavigate();
-
-  const registerUser = async (email, password) => {
-    try {
-      // Crea un nuevo usuario en Firebase con el email y contraseña proporcionados
-      await createUserWithEmailAndPassword(auth, email, password);
-      // Si el registro es exitoso, redirige al usuario a la página principal
-      navigate('/');
-    } catch (error) {
-      // Si ocurre un error durante el registro, puedes mostrar un mensaje de error genérico
-      setError('Error al registrar usuario. Inténtelo de nuevo más tarde.');
-    }
-  };
-  
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../Context/ThemeContext';
 import images from "../../constants/images";
-import { Link } from 'react-router-dom';
 import './footer.css';
 
 const Footer = () => {
