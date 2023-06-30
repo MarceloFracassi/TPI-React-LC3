@@ -2,6 +2,7 @@ import {useState} from 'react'
 import CardPizza from '../PizzaCard/CardPizza';
 import AddPizzaForm from "./AddPizzaForm"
 import DeletePizzaForm from './DeletePizzaForm';
+import ModifyPizzaForm from './ModifyPizzaForm';
 
 export const NewPizza = () => {
     const [showForm, setShowForm] = useState(false);
@@ -23,7 +24,16 @@ export const NewPizza = () => {
         ) : (
             <button className='submit-button' onClick={showPizzaForm}> Agregar una Pizza </button>
         )}
-        <DeletePizzaForm/>
+        {showForm ? (
+            <DeletePizzaForm onHideForm={hidePizzaForm}/>
+        ) : (
+            <button className='submit-button' onClick={showPizzaForm}> Eliminar Pizza </button>
+        )}
+        {showForm ? (
+            <ModifyPizzaForm onHideForm={hidePizzaForm}/>
+        ) : (
+            <button className='submit-button' onClick={showPizzaForm}> Modificar Pizza </button>
+        )}
     </div>
   )
 }
